@@ -1,0 +1,219 @@
+/*
+Theme Name: Bureau Conijn Theme
+Author: Innouveau
+Author URI: http://www.innouveau.nl
+Description: custom template for Bureau Conijn
+Version: 1.0
+License: exclusief gebruik voor Bureau Conijn
+
+*/
+
+html {
+    font-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 12px;
+    margin: 0;
+    width: 100%;
+    font-family: 'Roboto Condensed';
+    font-size: 12px;
+    line-height: 18px;
+    color: #555;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+/* architecture */
+
+#pagewrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#top {
+    height: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+
+#bottom {
+    padding: 10px 5px 40px 5px;
+}
+
+
+/* top */
+
+#branding {
+    display: inline-block;
+    width: 230px;
+    margin-right: 50px;
+}
+
+.menu-main-container {
+    display: inline-block;
+    width: calc(100% - 280px);
+    vertical-align: bottom;
+}
+
+.menu-main-container ul {
+    margin: 0;
+    padding: 0 0 6px 0;
+}
+
+.menu-main-container ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.menu-main-container ul li a {
+    padding: 3px 20px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    border: 1px solid transparent;
+}
+
+.menu-main-container ul li a:hover, .menu-main-container ul li.current-menu-parent a, .menu-main-container ul li.current-menu-item a {
+    border: 1px solid #000;
+}
+
+
+
+/* projects */
+
+#projects-container {
+    font-size: 0;
+}
+
+a.project-container {
+    display: inline-block;
+    width: calc(33% - 6px);
+    height: 300px; /* value is set later via jquery to garantue ratio */
+    position: relative;
+    overflow: hidden;
+    margin: 3px;
+    vertical-align: top;
+}
+
+.project-main-image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.loaded .project-main-image {
+    opacity: 1;
+}
+
+.project-title {
+    position: absolute;
+    left: 20px;
+    width: calc(100% - 20px);
+    bottom: -100px;
+    opacity: 0;
+    transition: bottom 0.7s ease, opacity 1.5s ease;
+}
+
+.project-container:hover .project-title {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.project-container:hover .project-main-image {
+    transform: scale(1.1);
+}
+
+.project-title h2 {
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-spacing: 3px;
+    margin-bottom: 0;
+}
+
+.project-title h3 {
+    font-size: 16px;
+    color: #fff;
+    font-spacing: 3px;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+
+/* single */
+
+.single-text {
+    width: 400px;
+    padding: 10px 80px 20px 40px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.single-main-image {
+    display: inline-block;
+    width: calc(100% - 400px);
+    vertical-align: top;
+}
+
+.single-main-image img {
+    width: 100%;
+}
+
+.single h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+
+
+
+@media (max-width: 1200px) {
+
+    #pagewrap {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    a.project-container {
+        width: calc(50% - 6px);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    a.project-container {
+        width: calc(100% - 6px);
+    }
+
+}
+
+
+
+
+
+
+
+
+
