@@ -48,6 +48,27 @@ body {
     padding: 10px 5px 40px 5px;
 }
 
+.main-left-col {
+    width: 400px;
+    padding: 10px 80px 20px 40px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main-right-col {
+    display: inline-block;
+    width: calc(100% - 400px);
+    vertical-align: top;
+}
+
+
+
+/* typography */
+
+h2 {
+    text-transform: uppercase;
+}
+
 
 /* top */
 
@@ -87,6 +108,22 @@ body {
 
 .menu-main-container ul li a:hover, .menu-main-container ul li.current-menu-parent a, .menu-main-container ul li.current-menu-item a {
     border: 1px solid #000;
+}
+
+
+
+/* home */
+
+.home-image img {
+    width: 100%;
+}
+
+
+
+/* contact */
+
+.main-right-col iframe {
+    width: 100%;
 }
 
 
@@ -158,19 +195,6 @@ a.project-container {
 
 
 /* single */
-
-.single-text {
-    width: 400px;
-    padding: 10px 80px 20px 40px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.single-main-image {
-    display: inline-block;
-    width: calc(100% - 400px);
-    vertical-align: top;
-}
 
 .single-main-image img {
     width: 100%;

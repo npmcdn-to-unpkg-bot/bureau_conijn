@@ -1,9 +1,16 @@
 <?php
+/**
+ *  Template Name: Contact Template
+ */
+?>
+
+
+<?php
     get_header();
     if( have_posts() ): while ( have_posts() ) : the_post();
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+        $map = get_post_meta($post->ID, 'map', true);
 ?>
-<div class="single"><div class="main-left-col">
+<div class="page"><div class="main-left-col">
         <h1>
             <?php the_title(); ?>
         </h1>
@@ -15,12 +22,9 @@
 
 
     <?php
-        if($image) {
-    ?>
-
-        <img src="<?php echo $image[0]; ?>" />
-
-    <?php } ?>
+        if($map) {
+            echo $map;
+        } ?>
 
 </div>
 
