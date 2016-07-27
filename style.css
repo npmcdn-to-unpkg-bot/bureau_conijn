@@ -31,6 +31,7 @@ body {
 }
 
 
+
 /* architecture */
 
 #pagewrap {
@@ -59,6 +60,7 @@ body {
     display: inline-block;
     width: calc(100% - 400px);
     vertical-align: top;
+    margin-bottom: 50px;
 }
 
 
@@ -93,6 +95,7 @@ h2 {
     list-style: none;
     display: inline-block;
     margin: 0 20px;
+    position: relative;
 }
 
 .menu-main-container ul li a {
@@ -110,9 +113,41 @@ h2 {
     border: 1px solid #000;
 }
 
+ul.sub-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.menu-main-container ul li:hover > ul.sub-menu {
+    display: block;
+}
+
+ul.sub-menu {
+    background: #fff;
+    padding: 20px 0 10px 0 ;
+}
+
+ul.sub-menu li {
+    display: block;
+    margin: 0;
+}
+
+.menu-main-container ul.sub-menu li a {
+    border: 0;
+    text-transform: none;
+    padding: 6px 16px;
+}
+
+.menu-main-container ul.sub-menu li a:hover {
+    background: #ddd;
+}
 
 
-/* home */
+
+    /* home */
 
 .home-image img {
     width: 100%;
@@ -196,7 +231,7 @@ a.project-container {
 
 /* single */
 
-.single-main-image img {
+.single .main-right-col img {
     width: 100%;
 }
 
@@ -205,6 +240,23 @@ a.project-container {
     text-transform: uppercase;
     line-height: 24px;
     letter-spacing: 2px;
+}
+
+
+
+/* gallery */
+
+.con-gallery #gallery-1 .gallery-item {
+    float: none;
+    margin: 0 0 50px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.con-gallery #gallery-1 .gallery-item img {
+    border: 0;
+    width: 100%;
+    height: auto;
 }
 
 

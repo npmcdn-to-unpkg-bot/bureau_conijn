@@ -4,6 +4,7 @@ $(window).ready(function(){
 
     setProjectContainers();
     setGrid();
+    moveGalleries();
 
     $(".project-main-image").each(function() {
         fadeIn($(this));
@@ -45,4 +46,8 @@ function fadeIn (element) {
         img.src = src;
     }
     loadImage(src);
+}
+
+function moveGalleries() {
+    $('.gallery').appendTo($('.con-gallery'));
 }

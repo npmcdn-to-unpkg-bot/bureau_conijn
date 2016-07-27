@@ -4,7 +4,6 @@
 
     <?php
         $counter = 0;
-        if(is_category("projects")) {
             if( have_posts() ): while ( have_posts() ) : the_post();
                 $counter++;
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
@@ -28,7 +27,7 @@
                     </div>
                 </a>
     <?php
-        endwhile;endif; }
+        endwhile;endif; 
     ?>
 
 </div>

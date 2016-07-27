@@ -25,6 +25,8 @@
 </div>
 
     <?php endwhile;endif; ?>
+
+    <div class="con-gallery"></div>
 </div>
 <!-- end of post -->
 
