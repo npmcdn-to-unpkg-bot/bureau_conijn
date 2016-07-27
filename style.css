@@ -110,7 +110,7 @@ h2 {
 }
 
 .menu-main-container ul li a:hover, .menu-main-container ul li.current-menu-parent a, .menu-main-container ul li.current-menu-item a {
-    border: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 ul.sub-menu {
@@ -147,10 +147,38 @@ ul.sub-menu li {
 
 
 
-    /* home */
+/* home */
 
-.home-image img {
+body.home, .home #bottom {
+    padding-bottom: 0;
+}
+
+#home-slide-frame {
     width: 100%;
+    /* height set by jquery */
+    overflow: hidden;
+    position: relative;
+}
+
+.home-slide-carrier {
+    width: 600%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s cubic-bezier(.2,.78,.71,.89);
+}
+
+.home-slide {
+    width: calc(100% / 6);
+    height: 100%;
+    float: left;
+}
+
+.home-slide .home-slide-project-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 
@@ -194,11 +222,11 @@ a.project-container.wait-for-load.loaded {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    transition: all 1s ease;
 }
 
-.wait-for-load .project-main-image{
+.wait-for-load .project-main-image {
     opacity: 0;
-    transition: all 1s ease;
 }
 
 .wait-for-load.loaded .project-main-image {
