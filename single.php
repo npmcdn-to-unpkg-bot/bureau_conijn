@@ -11,7 +11,7 @@
             <?php the_content(); ?>
         </div>
 
-    </div><div class="main-right-col">
+    </div><div class="main-right-col wait-for-load">
 
 
     <?php

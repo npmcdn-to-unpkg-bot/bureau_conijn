@@ -9,8 +9,8 @@
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
                 $subtitle = get_post_meta($post->ID, 'subtitle', true);
     ?>
-                <a href="<?php the_permalink(); ?>" class="project-container<?php if($counter % 3 == 0) { echo " portrait";}?>">
-                    <div class="project-main-image"
+                <a href="<?php the_permalink(); ?>" class="wait-for-load bg-loader project-container<?php if($counter % 3 == 0) { echo " portrait";}?>">
+                    <div class="project-main-image bg-load-element"
                     <?php
 
                         if($image) { ?>
@@ -27,7 +27,7 @@
                     </div>
                 </a>
     <?php
-        endwhile;endif; 
+        endwhile;endif;
     ?>
 
 </div>

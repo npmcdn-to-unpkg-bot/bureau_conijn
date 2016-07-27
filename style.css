@@ -177,6 +177,15 @@ a.project-container {
     overflow: hidden;
     margin: 3px;
     vertical-align: top;
+    transition: background 0.5s ease;
+}
+
+a.project-container.wait-for-load {
+    background: #ddd;
+}
+
+a.project-container.wait-for-load.loaded {
+    background: #fff;
 }
 
 .project-main-image {
@@ -185,11 +194,14 @@ a.project-container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    transition: all 1s ease;
-    opacity: 0;
 }
 
-.loaded .project-main-image {
+.wait-for-load .project-main-image{
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.wait-for-load.loaded .project-main-image {
     opacity: 1;
 }
 
@@ -235,11 +247,37 @@ a.project-container {
     width: 100%;
 }
 
+.main-right-col.wait-for-load img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.main-right-col.wait-for-load.loaded img {
+    opacity: 1;
+}
+
 .single h1 {
     font-size: 18px;
     text-transform: uppercase;
     line-height: 24px;
     letter-spacing: 2px;
+}
+
+.single .gallery.wait-for-load dt {
+    background: #ddd;
+}
+
+.single .gallery.wait-for-load img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.single .gallery.wait-for-load.loaded dt {
+    background: none;
+}
+
+.single .gallery.wait-for-load.loaded img {
+    opacity: 1;
 }
 
 
